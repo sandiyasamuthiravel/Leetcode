@@ -27,13 +27,13 @@ class Solution {
         {
             if(first.val!=second.val)
             { 
-                 reverse(second);
+                //  reverse(second);
                 return false;
             }
             first=first.next;
             second=second.next;
         }
-        reverse(second);
+        // reverse(second);
         return true;
     }
     public  ListNode reverse (ListNode node)

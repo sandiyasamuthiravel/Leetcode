@@ -31,7 +31,7 @@ class Solution {
         else if (right == null) {
             return left;
         } 
-        else {
+        else { // both left and right are not null, we found our result
             return root;
         }
     }

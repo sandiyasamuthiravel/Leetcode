@@ -27,13 +27,12 @@ class Solution {
     public List<List<Integer>> verticalTraversal(TreeNode root) {
         TreeMap<Integer, TreeMap<Integer, PriorityQueue<Integer>>> map = new TreeMap<>();
         Queue<Pair> queue = new LinkedList<>();
-        queue.offer(new Pair(root, 0, 0)); // node, row, col
+        queue.offer(new Pair(root, 0, 0));
         while (!queue.isEmpty()) {
             Pair t = queue.poll();
             TreeNode node = t.node;
             int row = t.row;
             int col = t.col;
-            // replace putIfAbsent
             if (!map.containsKey(col)) {
                 map.put(col, new TreeMap<>());
             }
